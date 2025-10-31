@@ -1,4 +1,4 @@
-## REST API 测试项目
+## RESTful API 测试项目
 
 ## 📋 项目简介
 
