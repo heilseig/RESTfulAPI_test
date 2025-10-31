@@ -1,0 +1,8 @@
+test_post_update_object:
+  register:
+    - [T-800, powerful, True]
+  update:
+    - [T-1000, vert powerful, True]
+
+test_post_delete_object:
+  - [Apple 20, wow, True]

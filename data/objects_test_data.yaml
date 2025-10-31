@@ -1,0 +1,20 @@
+test_get_all_objects_info:
+  # 期望总数, 期望唯一id
+  - [13, True]
+
+test_get_single_object_info:
+  # id, 期望项目名, 期待是否成功
+  - [1, Google Pixel 6 Pro, True]
+  - [100, Apple 20, False]
+
+test_register:
+  # 项目名, 项目数据, 期待是否成功
+  - [T-1000, very powerful!, True]
+
+test_update:
+  # id, 项目名, 项目数据, 期待是否成功
+  - [1, T-800, powerful!, False]
+
+test_delete:
+  # id, 期待是否成功
+  - [1, False]
