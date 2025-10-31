@@ -36,7 +36,7 @@
 pip3 install -r requirements.txt
 ```
 
-接着，修改 ```config.ini``` 配置文件，在Windows环境下，安装相应依赖之后，在命令行窗口执行命令：
+在Windows环境下，安装相应依赖之后，在命令行窗口执行命令：
 
 ```
 pytest
