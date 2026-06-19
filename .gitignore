@@ -17,10 +17,3 @@ dmypy.json
 # 日志文件
 logs/
 *.log
-
-# 测试报告（不提交到 GitHub，本地查看用）
-reports/
-*.html
-
-# Postman 本地配置文件（排除集合和环境变量文件）
-postman/*.json
