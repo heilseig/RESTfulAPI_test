@@ -51,7 +51,6 @@ pytest
 
 ### 5. 运行postman集合
 newman run postman/RESTfulAPITest.json -e postman/dev.json --reporters cli,html --reporter-html-export reports/test-report.html
-将RESTfulAPITest.json和dev.json替换成你的文件
 
 ## 🚀 项目特色
 
