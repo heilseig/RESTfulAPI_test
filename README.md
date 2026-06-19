@@ -19,37 +19,17 @@
 版本控制   Git                        代码与测试资产版本管理 
 
 ## 📁 项目结构
-RESTfulAPI_test/
-├── postman/ # Postman 集合与环境变量
-│ ├── RESTfulAPITest.json # 接口测试用例集合
-│ └── dev.json # 开发环境变量配置
-├── reports/ # 测试报告
-│ └── test-report.html # Newman 生成的 HTML 报告
-├── api/ # 接口封装层（Python）
-│ └── user.py # 封装 HTTP 接口为 Python 方法
-├── common/ # 工具类
-│ ├── file_data_loader.py # YAML/JSON/INI 文件加载器
-│ └── logger.py # 日志模块
-├── core/ # 核心层
-│ └── api_client.py # Requests 请求封装
-├── data/ # 测试数据
-│ ├── objects_test_data.yaml # 接口级测试数据
-│ └── scenario_test_data.yaml # 场景级测试数据
-├── operation/ # 业务关键字层
-│ └── user.py # 封装业务操作（注册/查询/更新/删除）
-├── tests/ # 测试用例层
-│ ├── api_tests/ # 单接口测试用例
-│ │ ├── test_objects.py # GET 查询测试
-│ │ ├── test_posts.py # POST 新增测试
-│ │ ├── test_update.py # PUT 更新测试
-│ │ └── test_delete.py # DELETE 删除测试
-│ └── scenario_tests/ # 业务场景测试用例
-│ ├── test_post_delete.py # 注册后删除场景
-│ └── test_post_update.py # 注册后更新场景
-├── config.ini # 配置文件（base_url 等）
-├── pytest.ini # Pytest 配置文件
-├── requirements.txt # Python 依赖
-└── README.md # 项目说明
+- api ====>> 接口封装层，如封装HTTP接口为Python接口
+- common ====>> 各种工具类
+- core ====>> requests请求方法封装、关键字返回结果类
+- data ====>> 测试数据文件管理
+- operation ====>> 关键字封装层，如把多个Python接口封装为关键字
+- pytest.ini ====>> pytest配置文件
+- requirements.txt ====>> 相关依赖包文件
+- config.ini ====>> 配置文件
+- tests ====>> 测试用例
+- postman ====>> Postman 集合与环境变量
+- reports ====>> 测试报告
 
 
 ## 🚀 快速开始
@@ -73,14 +53,13 @@ pytest
 newman run postman/RESTfulAPITest.json -e postman/dev.json --reporters cli,html --reporter-html-export reports/test-report.html
 将RESTfulAPITest.json和dev.json替换成你的文件
 
-✅ 测试覆盖
+## 🚀 项目特色
 
-接口	        方法	说明
-/objects	    GET	    查询全部对象
-/objects/{id}	GET	    查询单个对象
-/objects	    POST	新增对象
-/objects/{id}	PUT	    更新对象
-/objects/{id}	DELETE	删除对象
+- ✅ 零配置，开箱即用：无需申请 API Key，无需复杂配置，克隆即用。
+
+- ✅ 丰富的 CRUD 操作：完整支持对“对象”资源的创建、读取、更新和删除操作。
+
+- ✅ 纯净的测试数据：所有操作均在沙盒环境中进行，不会影响真实数据。
 
 📊 测试报告
 执行 Newman 后，会在 reports/ 目录下生成 HTML 格式的测试报告，用浏览器打开即可查看详细结果。
